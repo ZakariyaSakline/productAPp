@@ -1,0 +1,13 @@
+.example-card {
+    width: 95%;
+    background-color: rgb(233, 230, 230);
+    }
+  
+  .closeBtn{
+    color: red;
+    transition: 0.7s;
+  }
+.closeBtn:hover{
+  background-color: red;
+  color: white;
+}

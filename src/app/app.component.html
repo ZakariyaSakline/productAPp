@@ -1,0 +1,26 @@
+
+
+
+
+<mat-drawer-container class="example-container">
+
+  <mat-drawer mode="side" opened>
+    <a mat-button [routerLink]="'/Product'" class="btn"><i class="material-icons">person</i>Product</a>
+  </mat-drawer>
+
+  <mat-drawer-content>
+      <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+<!-- <h1>hi</h1>
+<div fxLayout >
+  <div class="item-1" fxFlex="20%" >
+    <a mat-button [routerLink]="'/Product'" class="btn"><i class="material-icons">person</i>Employees</a>
+  </div>
+  <div class="item-2" fxFlex="80%">
+      <router-outlet></router-outlet>
+  </div>
+</div> -->

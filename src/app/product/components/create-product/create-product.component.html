@@ -1,0 +1,51 @@
+
+
+
+  <h1 style="text-align: center; color: brown ">Add more Product :</h1>
+
+  <form [formGroup]="signupForm" (ngSubmit)="productSubmit(signupForm)" (ngSubmit)="onNoClick()" (ngSubmit)="openSnackBar(message='Add table row successfully', action='Done')">
+      <div class="example-container">
+
+        <mat-form-field appearance="outline" style="width: 80% ;" hintLabel="Max 5 numbers">
+          <mat-label>Code</mat-label>
+          <input matInput #code  formControlName="productCode" ngModel placeholder="Enter product code" maxlength="5" pattern="[0-9]{0,5}">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint align="end">{{code.value?.length || 0}}/5</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 80% ;" hintLabel="Max 20 character">
+          <mat-label> Name</mat-label>
+          <input matInput #name type="text"  formControlName="productName" placeholder="Enter product name" maxlength="20" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint align="end">{{name.value?.length || 0}}/20</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 80% ;" hintLabel="Max 20 character">
+          <mat-label> Brand</mat-label>
+          <input matInput #brand type="text"  formControlName="productBrand" placeholder="Enter product brand" maxlength="20" >
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint align="end">{{brand.value?.length || 0}}/20</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 80% ;" hintLabel="Max 6 number">
+          <mat-label> Price</mat-label>
+          <input matInput #price   formControlName="productPrice" placeholder="Enter product price" maxlength="6" pattern="[0-9]{0,5}">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint align="end">{{price.value?.length || 0}}/6</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 80% ;" hintLabel="Max 150 character">
+          <mat-label> Description </mat-label>
+          <textarea matInput #description  type="text" formControlName="productDescription" placeholder="Enter product description" maxlength="150"></textarea>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint align="end">{{description.value?.length || 0}}/150</mat-hint>
+        </mat-form-field>
+
+        <div class="example-button-row">
+          <button mat-stroked-button   class="submitBtn" type="submit">Submit</button>
+          <button mat-stroked-button mat-dialog-close class="closeBtn">Cancel</button>
+        </div> 
+      </div>
+  </form>
+
+

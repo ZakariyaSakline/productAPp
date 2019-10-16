@@ -1,0 +1,13 @@
+.example-container {
+    width: 100%;
+    height: 800px;
+    margin: 0px;
+  }
+  .btn{
+      padding: 10px;
+      margin: 10px;
+  }
+  .btn:hover{
+      background-color: brown;
+      color: white;
+  }
